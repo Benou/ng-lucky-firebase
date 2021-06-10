@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ng-lucky-firebase": {
+      "hosting": {
+        "ng-lucky-firebase": [
+          "ng-lucky-firebase"
+        ]
+      }
+    }
+  }
+}
