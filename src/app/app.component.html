@@ -1,1 +1,4 @@
-<p>Lucky Fire!</p>
+<app-sidenav [opened]="sidenavOpened" (openedChange)="onSidenavOpenedChange($event)">
+  <app-topbar (toggleSidenav)="toggleSidenav()"></app-topbar>
+  <router-outlet></router-outlet>
+</app-sidenav>
