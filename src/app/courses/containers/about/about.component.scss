@@ -1,0 +1,21 @@
+.about {
+  padding: 40px;
+
+  .course-image {
+    max-width: 350px;
+    border-radius: 4px;
+  }
+
+  .populate-database-btn {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    mat-spinner {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

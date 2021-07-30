@@ -1,24 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   sidenavOpened: boolean;
 
-  constructor(private db: AngularFirestore) {
+  constructor() {
     this.sidenavOpened = false;
-  }
-
-  ngOnInit(): void {
-    this.db.collection('courses').stateChanges()
-      .subscribe(snaps => {
-        const courses = snaps.map(snap => ({ id: snap.payload.doc.id, ...(snap.payload.doc.data() as {}) }));
-        console.log(courses);
-      })
   }
 
   toggleSidenav(): void {

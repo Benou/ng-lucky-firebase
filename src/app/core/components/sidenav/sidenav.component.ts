@@ -14,6 +14,10 @@ export class SidenavComponent {
     this.openedChange = new EventEmitter<boolean>();
   }
 
+  onOpenedChange(opened = false): void {
+    this.openedChange.emit(opened);
+  }
+
   logout(): void {
 
   }
