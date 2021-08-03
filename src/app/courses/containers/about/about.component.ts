@@ -19,7 +19,7 @@ export class AboutComponent {
     this.loading$ = this.store.select(CoursesSelectors.selectLoading).pipe(share());
   }
 
-  populateDatabase() {
+  populateDatabase(): void {
     this.store.dispatch(CoursesActions.populateDatabase());
   }
 }

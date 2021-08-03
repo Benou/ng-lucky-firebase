@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+
+import { Course } from '../../../shared';
 
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.scss']
 })
-export class CoursesComponent implements OnInit {
+export class CoursesComponent {
+  /*courses$: Observable<Course[]>;
+  beginnersCourses$: Observable<Course[]>;
+  advancedCourses$: Observable<Course[]>;*/
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  constructor(private router: Router) {}
 }
